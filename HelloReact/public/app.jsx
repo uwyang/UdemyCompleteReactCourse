@@ -1,16 +1,24 @@
 // user https://babeljs.io/repl/ to see how Babel gets compiledinto actual bael.
 //jsx is the prefered way of creating react apps.
 
+//scripts are gone from index.html
+//dependencies are in package.json.
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+
 var GreeterMessage = React.createClass({
   render: function(){
     //name is already value.
     var name = this.props.name;
     var message = this.props.message;
-    return(
-    <div>
-      <h1>Hello {name}</h1>
-      <p>Message: {message}</p>
-    </div>);
+    return (
+      <div>
+        <h1>Hello {name}!</h1>
+        <p>{message}</p>
+      </div>
+    );
+
   },
 
 });
